@@ -59,9 +59,17 @@ const fetchGithubData = async (username, options) => {
     repos = [...repos, ...fetchedRepos];
   } while (fetchedRepos.length == PER_PAGE);
 
+  const user = await rp({
+    uri: `${API_BASE_URL}/users/${username}`,
+    headers: {
+      "User-Agent": username
+    },
+    json: true
+  });
+
   return {
     repositories: repos.map(r => remap(r, fields)),
-    user: repos[0].owner
+    user
   };
 };
 
