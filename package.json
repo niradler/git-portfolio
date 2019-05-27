@@ -1,18 +1,26 @@
 {
-  "name": "git-portfolio",
+  "name": "protfolio",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest --watch"
+  "description": "Generate portfolio website from git service such as github.",
+  "main": "src/index.js",
+  "bun": {
+    "protfolio": "./bin/protfolio.js"
   },
-  "keywords": [],
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "github",
+    "git",
+    "portfolio"
+  ],
   "author": "Nir Adler <niradler55@email.com> (https://niradler.com)",
   "license": "MIT",
   "devDependencies": {
     "jest": "^24.8.0"
   },
   "dependencies": {
+    "commander": "^2.20.0",
     "ejs": "^2.6.1",
     "file-system": "^2.2.2",
     "object-remap": "0.0.7",
