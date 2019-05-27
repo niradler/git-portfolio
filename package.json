@@ -1,9 +1,9 @@
 {
   "name": "protfolio",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generate portfolio website from git service such as github.",
   "main": "src/index.js",
-  "bun": {
+  "bin": {
     "protfolio": "./bin/protfolio.js"
   },
   "scripts": {
